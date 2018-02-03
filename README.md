@@ -1,3 +1,8 @@
+
+# 构建一个可以交互的博客功能
+
+## 一、新建一个专案
+
 ```
 rails new messageapp
 ```
@@ -6,7 +11,8 @@ rails new messageapp
 - git add .
 - git commit -m "initial commit"
 
-```
+在git中完成版本管理；
+
 ```
 rails g model Message title:string description:text
 ```
@@ -85,13 +91,19 @@ Puma starting in single mode...
 * Environment: development
 * Listening on tcp://0.0.0.0:3000
 Use Ctrl-C to stop
-```
-安装gem：https://rubygems.org/
-（1）安装：simple_form 3.5.0
+
+
+- 安装gem：
+https://rubygems.org/
+
+- （1）安装：simple_form 3.5.0
 https://rubygems.org/gems/simple_form
-（2）安装：bootstrap-sass 3.3.7
+
+- （2）安装：bootstrap-sass 3.3.7
 https://rubygems.org/gems/bootstrap-sass
-（3）运行：bundle install
+
+- （3）运行：bundle install
+
 ```
 bundle install
 rails generate simple_form:install --bootstrap
@@ -132,8 +144,9 @@ Puma starting in single mode...
 Use Ctrl-C to stop
 
 ```
+# 二、填充代码
 
-# 控制器代码：
+## （1）控制器代码：
 ```
 class MessagesController < ApplicationController
   before_action :find_message,only: [:show,:edit,:update,:destroy]
@@ -143,8 +156,7 @@ class MessagesController < ApplicationController
     @message = Message.all.order("created_at DESC")
   end
 
-  def show
-
+   def show
   end
 
   def new
@@ -161,7 +173,6 @@ class MessagesController < ApplicationController
   end
 
     def edit
-
     end
 
     def update
@@ -189,9 +200,9 @@ end
 end
 ```
 
-views 代码
+## （2）views 代码
 
-form.html.erb
+- form.html.erb
 
 ```
 <%= simple_form_for @message do |f| %>
@@ -201,7 +212,7 @@ form.html.erb
 <% end %>
 ```
 
-new.html.erb
+- new.html.erb
 
 ```
 <h1>new message</h1>
@@ -209,7 +220,7 @@ new.html.erb
 <%= render 'form' %>
 ```
 
-edit.html.erb
+- edit.html.erb
 
 ```
 <h1>edit message</h1>
@@ -217,7 +228,7 @@ edit.html.erb
 <%= render 'form' %>
 ```
 
-show.html.erb
+- show.html.erb
 
 ```
 <h2><%= @message.title %></h2>
