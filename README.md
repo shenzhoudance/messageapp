@@ -3239,3 +3239,39 @@ https://github.com/RyanHemrick/Message-Board/blob/master/app/assets/stylesheets/
 
 
 ```
+
+# 上传heroku
+
+command+s 存档
+
+修改 Gemfile 后要 bundle install
+
+存档
+
+git add .
+git commit -m "move sqlite3 to dev group & add pg to production group "
+具体可以参考第一课相关章节以及帮助文档
+
+
+
+Step3：在 Heroku 建立新项目
+
+首先记得登入
+heroku login
+
+创建
+heroku create
+
+
+Step 4：上传到 heroku
+
+在终端输入
+git push heroku master
+
+
+
+Step 5：跑 heroku run rake db:migrate
+
+执行
+
+heroku run rake db:migrate
