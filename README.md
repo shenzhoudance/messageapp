@@ -1,10 +1,10 @@
 ```
 rails new messageapp
 ```
->cd messageapp
->git init
->git add .
->git commit -m "initial commit"
+- cd messageapp
+- git init
+- git add .
+- git commit -m "initial commit"
 
 ```
 ```
