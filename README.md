@@ -3231,3 +3231,11 @@ edit
 
 最后一部分：完成页面的美化：
 添加scss代码
+
+https://github.com/RyanHemrick/Message-Board/blob/master/app/assets/stylesheets/application.css.scss
+
+```
+
+
+
+```
