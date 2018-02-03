@@ -130,7 +130,7 @@ Puma starting in single mode...
 * Listening on tcp://0.0.0.0:3000
 Use Ctrl-C to stop
 
-
+```
 
 # 控制器代码：
 ```
@@ -191,6 +191,7 @@ end
 views 代码
 
 form.html.erb
+
 ```
 <%= simple_form_for @message do |f| %>
 <%= f.input :title, label: "message title" %>
@@ -198,13 +199,17 @@ form.html.erb
 <%= f.button :submit %>
 <% end %>
 ```
+
 new.html.erb
+
 ```
 <h1>new message</h1>
 
 <%= render 'form' %>
 ```
+
 edit.html.erb
+
 ```
 <h1>edit message</h1>
 
@@ -212,6 +217,7 @@ edit.html.erb
 ```
 
 show.html.erb
+
 ```
 <h2><%= @message.title %></h2>
 <p><%= @message.description %></p>
