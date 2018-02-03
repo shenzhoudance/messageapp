@@ -1,6 +1,8 @@
 <% @message.each do |message| %>
-<h2><%= message.title %></h2>
-<%= link_to "vive message", message_path(message),class: "btn btn-default" %>
+<div class="col-md-4">
+  <div class="message">
+    <h2 class="message-title"><%= message.title %></h2>
+    <%= link_to "vive message", message_path(message),class: "btn btn-cusom" %>
+ </div>
+</div>
 <% end %>
-
-<%= link_to "new message", new_message_path %>
